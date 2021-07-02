@@ -27,6 +27,9 @@ set noswapfile
 set encoding=utf-8 
 set cursorline  
 
+
+"set showtabline=2
+let g:airline#extensions#tabline#enabled = 1
 " Plugins aquí 
 
 call plug#begin('~/.local/share/nvim/plugged') 
@@ -39,7 +42,7 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline' 
 Plug 'vim-airline/vim-airline-themes' 
 " TAB LINE
-Plug 'romgrk/barbar.nvim'"
+
 " ICONS 
 Plug 'ryanoasis/vim-devicons' 
 "Plug 'kyazdani42/nvim-web-devicons'
@@ -50,7 +53,13 @@ Plug 'honza/vim-snippets'
 Plug 'habamax/vim-godot' 
 " Auto pairs 
 Plug 'jiangmiao/auto-pairs' 
-" Autocompletado COC 
+
+" GIT
+"
+"
+
+
+"" Autocompletado COC 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 
 call plug#end() 
@@ -63,10 +72,11 @@ colorscheme gruvbox
 
 " Mapeado de teclas 
 " TECLA LIDER 
-let mapleader = " " 
+let mapleader="," 
 " F6 abrir nerdtree 
-nmap :NERDTreeToggle 
+nmap <F6> :NERDTreeToggle <CR>
 " F5 refrescar archivo 
-nmap :source % 
-" Teclas de navegacion 
+nmap <F5> :source % <CR>
 
+" Teclas de navegacion 
+nmap <Leader-a> <C-w> h
